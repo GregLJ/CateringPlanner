@@ -22,7 +22,16 @@ namespace CateringPlanner.Data
         {
             modelBuilder
                 .Entity<Customer>()
-                .HasData(new Customer { FirstName = "Test", LastName = "McTest" });
+                .HasData(new Customer { FirstName = "Bob", LastName = "Blart", StreetAddress = "123 Nowhere Lane", City = "Nowhere", State = "Alaska", ZipCode = 01234, PhoneNumber = "545-555-5454", Email = "bob@bobble.com" },
+							new Customer { FirstName = "Becky", LastName = "Blazer", StreetAddress = "123 Somewhere Lane", City = "Somewhere", State = "Arizona", ZipCode = 43210, PhoneNumber = "454-555-4545", Email = "becky@bobble.com" });
+			modelBuilder
+				.Entity<MenuItem>()
+				.HasData(new MenuItem { });
+			modelBuilder
+				.Entity<Ingredient>()
+				.HasData(new Ingredient { Name = "Mushrooms"});
+
+
         }
     }
 }
