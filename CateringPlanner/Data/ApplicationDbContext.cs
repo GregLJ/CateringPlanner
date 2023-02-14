@@ -17,5 +17,12 @@ namespace CateringPlanner.Data
 		public DbSet<MenuItemIngredient> MenuItemIngredients { get; set; }
 		public DbSet<Party> Party { get; set; }
 		public DbSet<PartyMenuItem> PartyMenuItems { get; set; }
-	}
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder
+                .Entity<Customer>()
+                .HasData(new Customer { FirstName = "Test", LastName = "McTest" });
+        }
+    }
 }
