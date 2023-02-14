@@ -17,15 +17,15 @@ namespace CateringPlanner.Models
         [DisplayName("Last Name")]
         public string? LastName { get; set; }
         [DisplayName("Street Address")]
-        public string StreetAddress { get; set; }
-		public string City { get; set; }
-		public string State { get; set; }
+        public string? StreetAddress { get; set; }
+		public string? City { get; set; }
+		public string? State { get; set; }
         [DisplayName("Zip Code")]
-        public int ZipCode { get; set; }
+        public string? ZipCode { get; set; }
 
 		[Required]
         [DisplayName("Phone Number")]
-        public string PhoneNumber { get; set; }
+        public string? PhoneNumber { get; set; }
 
 		[EmailAddress]
 		[Required]

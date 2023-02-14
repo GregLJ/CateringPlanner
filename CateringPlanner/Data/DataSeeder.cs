@@ -10,8 +10,8 @@ namespace CateringPlanner.Data
         {
             modelBuilder
                 .Entity<Customer>()
-                .HasData(new Customer { Id = 10, FirstName = "Bob", LastName = "Blart", StreetAddress = "123 Nowhere Lane", City = "Nowhere", State = "Alaska", ZipCode = 01234, PhoneNumber = "545-555-5454", Email = "bob@bobble.com" },
-                            new Customer { Id = 11, FirstName = "Becky", LastName = "Blazer", StreetAddress = "123 Somewhere Lane", City = "Somewhere", State = "Arizona", ZipCode = 43210, PhoneNumber = "454-555-4545", Email = "becky@bobble.com" });
+                .HasData(new Customer { Id = 10, FirstName = "Bob", LastName = "Blart", StreetAddress = "123 Nowhere Lane", City = "Nowhere", State = "Alaska", ZipCode = "01234", PhoneNumber = "545-555-5454", Email = "bob@bobble.com" },
+                            new Customer { Id = 11, FirstName = "Becky", LastName = "Blazer", StreetAddress = "123 Somewhere Lane", City = "Somewhere", State = "Arizona", ZipCode = "43210", PhoneNumber = "454-555-4545", Email = "becky@bobble.com" });
             modelBuilder
                 .Entity<MenuItem>()
                 .HasData(new MenuItem { Id = 101, Name = "Chicken Marsala" });
